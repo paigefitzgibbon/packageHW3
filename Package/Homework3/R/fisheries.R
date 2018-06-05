@@ -1,6 +1,5 @@
 #' Describe diversity based on a list of species
-#'
-#' Compute a species diversity index
+#' @author Celine Mol and Paige FitzGibbon
 #' @param fish_price a table that has prices for different fish
 #' @param fish_catches a table that has the number caught for each fish species for each location
 #' @param showplot if requested, a graph of revenue by location and total revenue
