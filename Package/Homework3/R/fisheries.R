@@ -1,4 +1,4 @@
-#' Describe diversity based on a list of species
+#' Describe the most frequently caught fish for each location and total revenue for fisheries
 #' @author Celine Mol and Paige FitzGibbon
 #' @param fish_price a table that has prices for different fish
 #' @param fish_catches a table that has the number caught for each fish species for each location
@@ -10,7 +10,7 @@
 #' \item{totalrevenue}{Total fisheries revenue sum}
 #' }
 #' @examples
-#' computediversity(c("butterfly","butterfly","mosquito","butterfly","ladybug","ladybug")))
+#' fisheries(fish_price, fish_catches, showplot=TRUE)
 
 fisheries = function(fish_price, fish_catches, showplot = FALSE) {
 

@@ -41,20 +41,24 @@ for ( i in 1: length(fish)) {
 
 ```
 
-### Part 1.b Run the function
+### Part 1.b Export example data to csv file for package DATA
 
 ```{r}
+fish_catches = as.data.frame(fish_catches)
+write.csv(fish_catches, file = 'fishmarketdata', row.names = TRUE)
+```
+
+### Part 1.c Run the function
+
+```{r}
+
+use_data(fishmarketdata, pkg = "Homework3", overwrite=TRUE)
+# issue - can't find package 'Homework3' - help?
+data(fishmarketdata)
 
 fisheries(fish_price, fish_catches, showplot=FALSE)
 
 fisheries(fish_price, fish_catches, showplot=TRUE)
-```
-
-### Part 1.c Export example data to csv file for package DATA
-
-```{r}
-fish_catches = as.data.frame(fish_catches)
-write_csv(fish_catches, path = 'exampledata_fishmarket')
 ```
 
 ## Part 2. Fish Growth Rate Function
