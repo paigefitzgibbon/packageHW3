@@ -1,0 +1,56 @@
+---
+title: "FishAssignment"
+author: "Celine Mol, Paige Fitzgibbon"
+date: "6/2/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(devtools)
+library(roxygen2)
+```
+
+## Fish Assignment
+
+### Part 1. Generate example data
+
+```{r}
+# ----- Fish Prices ----- #
+
+fish = c("Cod", "Salmon", "Steelhead", "Tuna", "Shark", "Sole")
+price = c(34.89, 26.66, 15.41, 13.84, 58.66, 63.96)
+fish_price = data.frame(fish, price)
+fish_price$fish = as.character(fish_price$fish)
+
+# ----- Fish Catches by Location ----- # 
+
+locs = c("location1", "location2", "location3")
+fish_catches = matrix(nrow = length(fish), ncol = length(locs), 
+                      dimnames = list(fish, locs)) 
+
+for ( i in 1: length(fish)) {
+  for (j in 1:length(locs)) {
+      fish_catches[i,j] =  sample(1:100, 1)
+  }
+}
+
+```
+
+### Part 2. Run the function
+
+```{r}
+fisheries(fish_price, fish_catches, showplot=FALSE)
+
+fisheries(fish_price, fish_catches, showplot=TRUE)
+```
+
+
+#Show an example of using your growth rate function with parameters from Experiment A of Table 2 in Bjoornsson et al., 2007
+```{r}
+library(Homework3)
+help(fishgrowth)
+fishgrowth(-0.4970,0.1656,0.08588,-0.004266,14.3)
+```
+
