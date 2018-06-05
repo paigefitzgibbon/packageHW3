@@ -10,11 +10,14 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(devtools)
 library(roxygen2)
+load_all() # This will load all the packages
 ```
 
-## Fish Assignment
+# Fish Assignment
 
-### Part 1. Generate example data
+## Part 1. Fish Market Function
+
+### Part 1.a Generate example data
 
 ```{r}
 # ----- Fish Prices ----- #
@@ -38,11 +41,35 @@ for ( i in 1: length(fish)) {
 
 ```
 
-### Part 2. Run the function
+### Part 1.b Run the function
 
 ```{r}
+
 fisheries(fish_price, fish_catches, showplot=FALSE)
 
 fisheries(fish_price, fish_catches, showplot=TRUE)
 ```
+
+### Part 1.c Export example data to csv file for package DATA
+
+```{r}
+fish_catches = as.data.frame(fish_catches)
+write_csv(fish_catches, path = 'exampledata_fishmarket')
+```
+
+## Part 2. Fish Growth Rate Function
+*Instructions:*
+**Show an example of using your growth rate function with parameters from Experiment A from Table 2**
+
+```{r}
+help(fishgrowth)
+
+fishgrowth(a = -0.4970, b = 0.1656, c = 0.08588, d = -0.004266, T = 14.3)
+
+
+```
+
+
+
+
 

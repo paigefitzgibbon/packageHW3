@@ -3,6 +3,7 @@
 #' Compute a species diversity index
 #' @param fish_price a table that has prices for different fish
 #' @param fish_catches a table that has the number caught for each fish species for each location
+#' @param showplot if requested, a graph of revenue by location and total revenue
 #' @return list with the following items
 #' \describe{
 #' \item{mostfrequent}{ Most frequently caught fish in each location}
@@ -11,12 +12,6 @@
 #' }
 #' @examples
 #' computediversity(c("butterfly","butterfly","mosquito","butterfly","ladybug","ladybug")))
-#' @references
-#' http://www.tiem.utk.edu/~gross/bioed/bealsmodules/simpsonDI.html
-
-#* if user requests it graph of revenue by location and total revenue (as text)
-
-## --- Function begins here
 
 fisheries = function(fish_price, fish_catches, showplot = FALSE) {
 
