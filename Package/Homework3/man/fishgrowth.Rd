@@ -7,18 +7,25 @@
 fishgrowth(a, b, c, d, T)
 }
 \arguments{
-\item{T}{temperature of fishery in degrees celsius}
+\item{a}{zero-order coefficient}
 
-\item{coefficients}{\describe{
-\item {a} {zero order parameter}
-\item {b} {first order parameter}
-\item {c} {second order parameter}
-\item{d}{third order parameter}
-}}
+\item{b}{first-order coefficient}
+
+\item{c}{second-order coefficient}
+
+\item{d}{third-order coefficient}
+
+\item{T}{temperature of fishery in degrees celsius}
 }
 \description{
 Predicts fish growth rate based on temperature
 }
+\examples{
+fishgrowth(0.1,0.2,0.3,0.4, T=seq(from = 0, to = 18, by = 2))
+}
 \references{
 https://www.sciencedirect.com/science/article/abs/pii/S0044848607005182
+}
+\author{
+Celine Mol and Paige FitzGibbon
 }
