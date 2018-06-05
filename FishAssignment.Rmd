@@ -51,6 +51,6 @@ fisheries(fish_price, fish_catches, showplot=TRUE)
 ```{r}
 library(Homework3)
 help(fishgrowth)
-fishgrowth()
+fishgrowth(-0.4970,0.1656,0.08588,-0.004266,14.3)
 ```
 
