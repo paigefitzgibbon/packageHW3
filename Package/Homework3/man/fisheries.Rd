@@ -2,7 +2,7 @@
 % Please edit documentation in R/fisheries.R
 \name{fisheries}
 \alias{fisheries}
-\title{Describe diversity based on a list of species}
+\title{Describe the most frequently caught fish for each location and total revenue for fisheries}
 \usage{
 fisheries(fish_price, fish_catches, showplot = FALSE)
 }
@@ -10,6 +10,8 @@ fisheries(fish_price, fish_catches, showplot = FALSE)
 \item{fish_price}{a table that has prices for different fish}
 
 \item{fish_catches}{a table that has the number caught for each fish species for each location}
+
+\item{showplot}{if requested, a graph of revenue by location and total revenue}
 }
 \value{
 list with the following items
@@ -20,11 +22,11 @@ list with the following items
 }
 }
 \description{
-Compute a species diversity index
+Describe the most frequently caught fish for each location and total revenue for fisheries
 }
 \examples{
-computediversity(c("butterfly","butterfly","mosquito","butterfly","ladybug","ladybug")))
+fisheries(fish_price, fish_catches, showplot=TRUE)
 }
-\references{
-http://www.tiem.utk.edu/~gross/bioed/bealsmodules/simpsonDI.html
+\author{
+Celine Mol and Paige FitzGibbon
 }
