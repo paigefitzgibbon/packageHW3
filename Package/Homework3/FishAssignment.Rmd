@@ -57,6 +57,7 @@ fishmarketdata = fish_catches
 use_data(fishmarketdata, pkg = ".", overwrite=TRUE)
 # issue - can't find package 'Homework3' - help?
 data(fishmarketdata)
+help(fishmarketdata)
 
 fisheries(fish_price, fishmarketdata, showplot=FALSE)
 
